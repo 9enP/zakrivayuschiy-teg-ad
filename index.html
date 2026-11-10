@@ -472,7 +472,7 @@
     </main>
 
     <footer class="footer">
-      <button class="button save-button" type="button" aria-haspopup="dialog">
+      <button class="button save-button" type="button" aria-controls="dialog" onclick="window['dialog'].showModal()">
         <svg class="save-button__icon" aria-hidden="true">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
@@ -480,17 +480,17 @@
       </button>
     </footer>
 
-    <dialog class="modal" aria-labelledby="modal-title">
+    <dialog class="modal" id="dialog" aria-labelledby="modal-title">
       <svg class="modal__icon" aria-hidden="true">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
       <h2 class="modal__title" id="modal-title">Вставьте дискету, чтобы продолжить</h2>
-      <button class="button modal__button" type="button">
+      <button class="button modal__button" type="button" onclick="window['dialog'].close()">
         <span class="button__text">ОК</span>
       </button>
     </dialog>
 
     <script src="./scripts/like.js"></script>
-    <script src="./scripts/modal.js"></script>
-  </body>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
