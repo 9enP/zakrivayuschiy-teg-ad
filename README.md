@@ -1,1 +1,1 @@
-https://9enp.github.io/zakrivayuschiy-teg-ad/
+https://github.com/9enP/zakrivayuschiy-teg-ad
