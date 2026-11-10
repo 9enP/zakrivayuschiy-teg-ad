@@ -1,1 +1,55 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/* Все переменные проекта: шрифты, размеры, цвета, фон и отступы.
+   Здесь же лежат переопределения для мобильной контрольной точки. */
+
+:root {
+  /* Семейства шрифтов */
+  --font-main: 'Inter', 'Arial', sans-serif;
+  --font-accent: 'PressStart2P', 'Courier New', monospace;
+
+  /* Толщины вариативного шрифта: основной текст и заголовки карточек */
+  --text-weight: 410;
+  --title-weight: 715;
+
+  /* Размеры текста */
+  --text-size: 1.125rem;
+  --accent-size: 0.875rem;
+
+  /* Ширина контента: резиновая от 375px до 700px */
+  --content-width: clamp(min(100%, 375px), 50vw, 700px);
+
+  /* Цвета */
+  --accent-color: #000;
+  --page-background: #fff;
+  --card-background: #fff;
+  --button-text-color: #fff;
+  --label-stroke-color: #fff;
+  --heart-contour-color: #000;
+  --heart-hover-color: #000;
+  --animation-fill-color: #f00;
+
+  /* Фон страницы: сетка из двух repeating-linear-gradient и плавное затемнение */
+  --page-gradient:
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+  /* Иконки и модальное окно */
+  --floppy-size: 21px;
+  --modal-width: 357px;
+  --modal-padding: 30px;
+}
+
+@media (width <= 375px) {
+  :root {
+    --floppy-size: 28px;
+    --modal-padding: 30px 40px;
+  }
+}
