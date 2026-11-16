@@ -9,7 +9,7 @@ on:
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,4 +20,3 @@ jobs:
         uses: Yandex-Practicum/test-project-action@v1
         with:
           project: 'zakrivayuschiy-teg-ad'
-          verbose: 'true'
